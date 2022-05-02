@@ -1,0 +1,52 @@
+/* On importe la police Raleway depuis Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+/* On déclare nos variables pour les couleurs et pour la police */
+:root{
+    --primary-color: #87BB34;
+    --first-color: #121111;
+    --second-color: #2E3532;
+    --third-color: #847E89;
+    --fourth-color: #C4C4C4;
+    --fifth-color:#696969;
+    --font-color: #ffffff;
+    --raleway:'Raleway', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+header, aside, footer{
+    background-color: var(--first-color);
+}
+
+.nom{
+    display: flex;
+    width: 100%;
+    letter-spacing: 5px;
+    font-family: var(--raleway);
+    font-size: 25px;
+    color: var(--primary-color);
+}
+.contact p, .contact i{
+    color: var(--font-color);
+    display: none;
+}
+
+.fa-adjust{
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    background-color: var(--second-color);
+}
+main header{
+    background-color: var(--third-color);
+}
