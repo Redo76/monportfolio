@@ -1,19 +1,49 @@
 /* On importe la police Raleway depuis Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
-/* On déclare nos variables pour les couleurs et pour la police */
-:root{
+/* On déclare nos variables pour les couleurs et pour la police, on les affectes au thème DARK */
+:root, html[data-theme="dark"]{
     --primary-color: #87BB34;
     --first-color: #121111;
-    --second-color: #2E3532;
-    --third-color: #847E89;
-    --fourth-color: #C4C4C4;
-    --fifth-color:#696969;
+    --second-color:#2E3532;
+    --slider-mob-color: #2E3532;
+    --slider-desk-color: #2E3532;
+    --projet-mob-font-color:#ffffff;
+    --projet-desk-font-color:#ffffff;
+    --projet-btn-color: #C4C4C4;
+    --projet-icon-desk-color:#87BB34;
     --font-color: #ffffff;
-    --second-font-color: #000000;
+    --title-color: #ffffff;
+    --cv-btn-font-color:#ffffff;
+    --footer-color: #121111;
+    --form-color:#696969;
+    --footer-span-color:#87BB34;
+    --footer-icon-color:#2E3532;
     --raleway:'Raleway', sans-serif;
 }
 
+/* On déclare nos variables pour les couleurs et pour la police, on les affectes au thème LIGHT */
+html[data-theme="light"]{
+    --primary-color: #235789;
+    --first-color: #F5F5F5;
+    --second-color:#ffffff;
+    --slider-mob-color: #2B3C5E;
+    --slider-desk-color: #ffffff;
+    --projet-mob-font-color:#ffffff;
+    --projet-desk-font-color:#000000;
+    --projet-btn-color: #ffffff;
+    --projet-icon-desk-color:#ffffff;
+    --font-color: #000000;
+    --title-color: #ffffff;
+    --cv-btn-font-color:#ffffff;
+    --footer-color: #2B3C5E;
+    --form-color:#ffffff;
+    --footer-span-color:#ffffff;
+    --footer-icon-color:#ffffff;
+    --raleway:'Raleway', sans-serif;
+}
+
+/* On reset les valeurs à 0 */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -24,7 +54,8 @@ body{
     width: 100vw;
     background-color: var(--first-color);
 }
-header, aside, footer{
+/* Header */
+header, aside{
     background-color: var(--first-color);
 }
 header{
@@ -45,6 +76,7 @@ header{
 }
 .nom span{
     font-size: 24px;
+    font-weight: 700;
 }
 .contact{
     color: var(--font-color);
@@ -93,8 +125,18 @@ a{
     font-size: 25px;
 }
 
-main{
-    background-color: var(--second-color);
+/* Fin Header */
+
+/* Main */
+
+.main_head{
+    display: none;
+}
+main section{
+    background-color: var(--slider-mob-color);
+}
+main h2{
+    color: var(--font-color);
 }
 h2{
     color: var(--font-color);
@@ -103,21 +145,17 @@ h2{
     font-family: var(--raleway);
     padding: 20px;
 }
+
+
+/* Slider */
+
 .slider{
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
-.slider_dot{
-    text-align: center;
-}
-.dot{
-    width: 15px;
-    height: 15px;
-    background-color: #bbb;
-}
 .card{
-    color: var(--font-color);
+    color: var(--projet-mob-font-color);
     margin: auto;
     padding: 10px;
     scroll-snap-align: start;
@@ -145,15 +183,20 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--fourth-color);
+    background-color: var(--projet-btn-color);
 }
 .projet_btn p{
-    color: var(--second-font-color);
+    color: #000000;
 }
 .projet_btn i{
     font-size: 20px;
     color: var(--primary-color);
 }
+/* Fin Slider */
+
+/* Fin Main */
+
+/* Aside Profil */
 
 aside{
     color: var(--font-color);
@@ -189,9 +232,11 @@ aside button{
     border: none;
     border-radius: 20px;
     background-color: var(--primary-color);
-    color: var(--font-color);
+    color: var(--cv-btn-font-color);
     padding: 3px 15px;
 }
+
+/* Modal CV */
 
 #backdrop{
     display: none;
@@ -203,10 +248,17 @@ aside button{
     background: rgba(0, 0, 0, 0.75);
     z-index: 10;
 }
+
 #modal_cv{
+    display: none;
+    position: fixed;
+    width: 80%;
+    left: 10%;
+    top: 25vh;
     color: var(--font-color);
     background-color: var(--second-color);
-    display: none;
+    z-index: 20;
+    padding-bottom: 20px;
 }
 .close_div{
     display: flex;
@@ -230,6 +282,11 @@ aside button{
 #modal_cv ul{
     margin-left: 20px;
     list-style: none;
+    font-size: 14px;
+    padding-right: 10px;
+}
+ul li{
+    padding: 1px 0;
 }
 ul i{
     float: left;
@@ -248,13 +305,25 @@ ul i{
     color: var(--font-color);
 }
 
+/* Fin Modal CV */
+
+/* Fin Aside profil */
+
+/* Footer */
+
+footer{
+    background-color: var(--footer-color);
+}
 footer h2{
-    color: var(--font-color);
+    color: #ffffff;
     text-align: center;
     font-size: 30px;
     font-family: var(--raleway);
     padding: 20px;
 }
+
+/* Formulaire */
+
 form{
     display: flex;
     flex-direction: column;
@@ -263,7 +332,7 @@ form{
     font-family: var(--raleway);
 }
 form input, form textarea{
-    background-color: var(--fifth-color);
+    background-color: var(--form-color);
     border: none;
     padding: 5px;
     margin: 5px 0;
@@ -276,7 +345,7 @@ form input, form textarea{
 }
 form button{
     width: 120px;
-    background-color: var(--primary-color);
+    background-color: var(--footer-span-color);
     border: none;
     color: var(--font-color);
     margin: 5px auto;
@@ -284,13 +353,16 @@ form button{
     font-weight: 600;
 }
 footer span{
-    color: var(--primary-color);
+    color: var(--footer-span-color);
     font-size: 18px;
     font-weight: 600;
     display: flex;
     justify-content: center;
     margin: 15px;
 }
+
+/* Fin Formulaire */
+
 .reseaux{
     display: flex;
     justify-content: space-around;
@@ -298,7 +370,7 @@ footer span{
 
 }
 .res{
-    background-color: #2E3532;
+    background-color: var(--footer-icon-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,3 +382,5 @@ footer span{
     color: var(--primary-color);
     font-size: 40px;
 }
+
+/* Fin Footer */
