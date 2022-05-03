@@ -385,3 +385,9 @@ footer span{
 }
 
 /* Fin Footer */
+
+/* Début des Medias Queries */
+
+@media screen and (min-width:480px){
+    
+}
