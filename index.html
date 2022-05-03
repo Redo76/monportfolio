@@ -13,26 +13,12 @@
     <title>Mon Portfolio</title>
 </head>
 <body>
+    <!-- Début du header -->
     <header>
         <div class="en-tete">
             <div class="nom">
-                <p>R</p>
-                <p>E</p>
-                <p>D</p>
-                <p>O</p>
-                <p>U</p>
-                <p>A</p>
-                <p>N</p>
-                <p>E</p>
-                <p>H</p>
-                <p>A</p>
-                <p>M</p>
-                <p>A</p>
-                <p>D</p>
-                <p>A</p>
-                <p>C</p>
-                <p>H</p>
-                <p>E</p>
+                <span>REDOUANE</span>
+                <p>HAMADACHE</p>
             </div>
             <div class="contact">
                 <p>Contactez moi !</p>
@@ -40,6 +26,7 @@
                 <i class="fa-brands fa-github"></i>   
             </div>
         </div>
+        <!-- Petite icône pour switcher dark/light mode -->
         <div id="colorSwitch">
             <i class="fa-solid fas fa-adjust"></i>
         </div>
@@ -60,12 +47,8 @@
     </header>
     <main>
         <h2 id="travaux">Mes travaux.</h2>
+        <!-- Création d'un scroll horizontal / slider pour afficher les projets en mobile -->
         <div class="slider">
-            <!-- <div class="slider_dot">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div> -->
             <div class="card">
                 <img src="./assets/styles/img/Projet_1.png" alt="Un premier projet">
                 <h3>Nom du projet</h3>
@@ -128,6 +111,7 @@
             </div>
         </div>  
     </main>
+    <!-- Début de la partie Profil du portfolio -->
     <aside id="profil">
         <h2>Mon profil.</h2>
         <div class="photo_profil"></div>
@@ -135,35 +119,42 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur nisi, laboriosam optio ex natus tempore sequi omnis, sapiente recusandae praesentium veniam ipsum porro dolore officiis explicabo obcaecati. Quidem, laborum?</p>
         <button id="cv_btn">Voir compétences, expériences, formation</button>
     </aside>
-    <div class="modal_cv">
+    <!-- Création d'une modal pour afficher le CV au clic d'un boutton -->
+    <div id="backdrop"></div>
+    <div id="modal_cv">
+        <div class="close_div">
+            <p>Mon CV</p>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
         <h3>Compétence :</h3>
         <ul class="list-title">
-            <li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
-            <li>blablablablabalbalablabalbalbalbalbalablab</li>
-            <li>blablablablabalbalablabalbalbalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablab</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbal</li>
         </ul>
         <div class="logiciel">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
+            <i class="fa-brands fa-html5" style="color: #F37249"></i>
+            <i class="fa-brands fa-css3-alt" style="color: #328CCD"></i>
+            <i class="fa-brands fa-js " style="color: #E7E153"></i>
+            <i class="fa-brands fa-php" style="color: #7F79CB"></i>
+            <i class="fa-brands fa-wordpress" style="color: #4782DA"></i>
+            <i class="fa-brands fa-symfony"></i>
+            <i class="fa-brands fa-react" style="color: #1745E7"></i>
         </div>
-        <h3>expériences :</h3>
+        <h3>Expériences :</h3>
         <ul class="list-title">
-            <li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
-            <li>blablablablabalbalablabalbalbalbalbalablab</li>
-            <li>blablablablabalbalablabalbalbalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablab</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbal</li>
         </ul>
         <h3>Formations :</h3>
         <ul class="list-title">
-            <li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
-            <li>blablablablabalbalablabalbalbalbalbalablab</li>
-            <li>blablablablabalbalablabalbalbalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablabalbal</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbalbalablab</li>
+            <i class="fa-solid fa-angle-right"></i><li>blablablablabalbalablabalbalbalbal</li>
         </ul>
     </div>
+    <!-- Début du footer -->
     <footer>
         <h2>Formulaire de contact.</h2>
         <form action="">
