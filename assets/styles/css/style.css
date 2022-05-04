@@ -7,6 +7,7 @@
     --primary-color: #17b1bf;
     --first-color: #121111;
     --second-color:#2E3532;
+    --case-color:#121111;
     --main-header-color:#847E89;
     --slider-mob-color: #2E3532;
     --slider-desk-color: #2E3532;
@@ -30,7 +31,8 @@ html[data-theme="light"]{
     --primary-color: #17b1bf;
     --first-color: #F5F5F5;
     --second-color:#ffffff;
-    --main-header-color:#847E89;
+    --case-color:#ffffff;
+    --main-header-color:#e9e9e9;
     --slider-mob-color: #e9e8e886;
     --slider-desk-color: #ffffff;
     --projet-mob-font-color:#000000;
@@ -442,6 +444,9 @@ footer span{
     .en-tete{
         display: flex;
     }
+    .contact{
+        display: block;
+    }
     #colorSwitch{
         margin-right: 15px;
     }
@@ -473,8 +478,12 @@ footer span{
         padding: 0 10px 10px 10px;
         height: 40%;
     }
+    .main_head h2{
+        text-align: left;
+    }
     .flex_projet{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
     }
     .case_projet{
@@ -482,7 +491,7 @@ footer span{
         margin: 10px;
         border-radius: 20px 20px 0 20px ;
         overflow: hidden;
-        background-color: var(--first-color);
+        background-color: var(--case-color);
     }
     .case_projet img{
         width: 100%;
@@ -497,7 +506,7 @@ footer span{
         padding: 10px 15px;
     }
     .case_projet p{
-        color: var(--main-header-color);
+        color: #847E89;
         padding: 10px 15px;
     }
     .case_projet a{
@@ -511,24 +520,56 @@ footer span{
     .slider{
         flex-direction: column;
     }
-    .flex_info{
-        display: flex;
-        justify-content: space-around;
+    .card{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 90px;
+        grid-template-areas: "img info"
+                             "btn info";
     }
     .card img{
-        width: 50%;
-        padding: 10px;
+        width: 100%;
+        padding: 20px;
+        grid-area: img;
+    }
+    .card p{
+        width: 100%;
+        font-size: 15px;
+    }
+    .projet_info{
+        width: 100%;
+        grid-area: info;
     }
     .projet_btn{
-        margin: 25px 0;
-    }
-    .left{
-        margin-left: 13%;
+        grid-area: btn;
+        margin: auto;
     }
     .right{
-        margin-left: 63%;
+        display: grid;
+        grid-template-rows: 1fr 90px;
+        grid-template-areas: "info img"
+                             "info btn";
     }
     #travaux h2{
         display: none;
+    }
+    .photo_profil{
+        width: 335px;
+        height: 335px;
+    }
+    aside h2{
+        text-align:left ;
+    }
+    aside h3{
+        font-size: 40px;
+    }
+    aside p{
+        font-size:22px ;
+        width: 100%;
+        text-align: center;
+    }
+    #profil_content{
+        padding: 0 10%;
+        margin-top: 50px;
     }
 }
