@@ -1,46 +1,47 @@
 /* On importe la police Raleway depuis Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
+
 /* On déclare nos variables pour les couleurs et pour la police, on les affectes au thème DARK */
 :root, html[data-theme="dark"]{
-    --primary-color: #87BB34;
-    --first-color: #121111;
+    --primary-color: #17b1bf;
+    --first-color: #121111c4;
     --second-color:#2E3532;
     --slider-mob-color: #2E3532;
     --slider-desk-color: #2E3532;
     --projet-mob-font-color:#ffffff;
     --projet-desk-font-color:#ffffff;
     --projet-btn-color: #C4C4C4;
-    --projet-icon-desk-color:#87BB34;
+    --projet-icon-desk-color:#17b1bf;
     --font-color: #ffffff;
     --title-color: #ffffff;
     --aside-title-color:#ffffff;
     --cv-btn-font-color:#ffffff;
     --footer-color: #121111;
-    --form-color:#696969;
-    --footer-span-color:#87BB34;
+    --form-color:#2E3532;
+    --footer-span-color:#17b1bf;
     --footer-icon-color:#2E3532;
     --raleway:'Raleway', sans-serif;
 }
 
 /* On déclare nos variables pour les couleurs et pour la police, on les affectes au thème LIGHT */
 html[data-theme="light"]{
-    --primary-color: #235789;
+    --primary-color: #17b1bf;
     --first-color: #F5F5F5;
     --second-color:#ffffff;
-    --slider-mob-color: #2B3C5E;
+    --slider-mob-color: #e9e8e886;
     --slider-desk-color: #ffffff;
-    --projet-mob-font-color:#ffffff;
+    --projet-mob-font-color:#000000;
     --projet-desk-font-color:#000000;
     --projet-btn-color: #ffffff;
     --projet-icon-desk-color:#ffffff;
     --font-color: #000000;
-    --title-color: #ffffff;
-    --aside-title-color:#2B3C5E;
+    --title-color: #17b1bf;
+    --aside-title-color:#17b1bf;
     --cv-btn-font-color:#ffffff;
-    --footer-color: #2B3C5E;
+    --footer-color: #e9e8e886;
     --form-color:#ffffff;
-    --footer-span-color:#ffffff;
+    --footer-span-color:#17b1bf;
     --footer-icon-color:#ffffff;
     --raleway:'Raleway', sans-serif;
 }
@@ -55,6 +56,7 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: var(--first-color);
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* Header */
 header, aside{
@@ -77,6 +79,7 @@ header{
     color: var(--primary-color);
 }
 .nom span{
+    margin-right: 10px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -116,6 +119,15 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header_btn:hover{
+    background-color:var(--primary-color);
+}
+.header_btn:hover i{
+    color: var(--cv-btn-font-color);
+}
+.header_btn:hover p{
+    color: var(--cv-btn-font-color);
 }
 .header_btn p{
     font-size: 18px;
@@ -175,13 +187,14 @@ h2{
     width: 300px;
 }
 .projet_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
     width: 180px;
     margin: 25px auto;
     padding: 1px 10px;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--projet-btn-color);
 }
 .projet_btn p{
@@ -199,6 +212,7 @@ h2{
 
 aside{
     color: var(--font-color);
+    padding: 20px 0;
 }
 .photo_profil{
     margin: 20px auto;
@@ -229,13 +243,16 @@ aside p{
 }
 aside button{
     display: block;
+    cursor: pointer;
     margin: 40px auto;
     width: 290px;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: var(--primary-color);
     color: var(--cv-btn-font-color);
-    padding: 3px 15px;
+    padding: 10px 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
 }
 
 /* Modal CV */
@@ -332,24 +349,50 @@ form{
     margin: auto;
     font-family: var(--raleway);
 }
+form div{
+    position: relative;
+}
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
 form input, form textarea{
-    background-color: var(--form-color);
-    border: none;
-    padding: 5px;
-    margin: 5px 0;
+    width: 100%;
+    background-color: var(--footer-color);
+    color: var(--font-color);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--primary-color);
+    opacity: 0.5;
+    padding: 10px 7px;
     resize: none;
+    outline: none;
+}
+
+input:focus ~ .underline, textarea:focus ~ .underline {
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 ::placeholder{
     color: var(--font-color);
+    opacity: 0.5;
     font-size: 18px;
-    font-weight: 600;
+    font-style: italic;
 }
 form button{
     width: 120px;
     background-color: var(--footer-span-color);
+    border-radius: 20px;
     border: none;
-    color: var(--font-color);
-    margin: 5px auto;
+    color: white;
+    margin: 10px auto;
     padding: 5px 0;
     font-weight: 600;
 }
@@ -367,7 +410,7 @@ footer span{
 .reseaux{
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 20px;
 
 }
 .res{
@@ -377,7 +420,12 @@ footer span{
     align-items: center;
     width: 60px;
     height: 60px;
-
+    transform: scale(1);
+    transition: ease-in-out 0.4s;
+}
+.res:hover{
+    transform: scale(1.3);
+    transition: ease-in-out 0.4s;
 }
 .res i{
     color: var(--primary-color);
@@ -389,5 +437,7 @@ footer span{
 /* Début des Medias Queries */
 
 @media screen and (min-width:480px){
-    
+    .main_head{
+        display: block;
+    }
 }
