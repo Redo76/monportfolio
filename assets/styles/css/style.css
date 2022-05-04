@@ -191,7 +191,7 @@ h2{
     align-items: center;
     cursor: pointer;
     width: 180px;
-    margin: 25px 0;
+    margin: 25px auto;
     padding: 1px 10px;
     border-radius: 20px;
     background-color: var(--projet-btn-color);
@@ -436,6 +436,37 @@ footer span{
 /* Début des Medias Queries */
 
 @media screen and (min-width:480px){
+    header{
+        height: 340px;
+    }
+    .en-tete{
+        display: flex;
+    }
+    #colorSwitch{
+        margin-right: 15px;
+    }
+    .nom{
+        justify-content: flex-start;
+        font-size: 30px;
+    }
+    .nom span{
+        font-size: 30px;
+    }
+    .flex_btn{
+        display: flex;
+        justify-content: space-around;
+    }
+    .header_btn{
+        margin: 30px 0;
+        width: 220px;
+        justify-content: space-around;
+    }
+    .header_btn p{
+        font-size: 25px;
+    }
+    .projet_btn i{
+        font-size: 30px;
+    }
     .main_head{
         display: block;
         background-color:var(--main-header-color) ;
@@ -474,10 +505,29 @@ footer span{
         padding: 10px 15px;
         align-self: flex-end;
     }
+    .case_projet a:hover{
+        color: white;
+    }
     .slider{
         flex-direction: column;
     }
-
+    .flex_info{
+        display: flex;
+        justify-content: space-around;
+    }
+    .card img{
+        width: 50%;
+        padding: 10px;
+    }
+    .projet_btn{
+        margin: 25px 0;
+    }
+    .left{
+        margin-left: 13%;
+    }
+    .right{
+        margin-left: 63%;
+    }
     #travaux h2{
         display: none;
     }
