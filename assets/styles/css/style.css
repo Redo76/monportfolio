@@ -5,8 +5,9 @@
 /* On déclare nos variables pour les couleurs et pour la police, on les affectes au thème DARK */
 :root, html[data-theme="dark"]{
     --primary-color: #17b1bf;
-    --first-color: #121111c4;
+    --first-color: #121111;
     --second-color:#2E3532;
+    --main-header-color:#847E89;
     --slider-mob-color: #2E3532;
     --slider-desk-color: #2E3532;
     --projet-mob-font-color:#ffffff;
@@ -29,6 +30,7 @@ html[data-theme="light"]{
     --primary-color: #17b1bf;
     --first-color: #F5F5F5;
     --second-color:#ffffff;
+    --main-header-color:#847E89;
     --slider-mob-color: #e9e8e886;
     --slider-desk-color: #ffffff;
     --projet-mob-font-color:#000000;
@@ -167,13 +169,11 @@ h2{
 }
 .card{
     color: var(--projet-mob-font-color);
-    margin: auto;
     padding: 10px;
     scroll-snap-align: start;
 }
 .card img{
     display: block;
-    margin: auto;
 }
 .card h3{
     text-align: center;
@@ -182,7 +182,6 @@ h2{
     font-weight: 600;
 }
 .card p{
-    margin: auto;
     padding: 5px;
     width: 300px;
 }
@@ -192,7 +191,7 @@ h2{
     align-items: center;
     cursor: pointer;
     width: 180px;
-    margin: 25px auto;
+    margin: 25px 0;
     padding: 1px 10px;
     border-radius: 20px;
     background-color: var(--projet-btn-color);
@@ -439,5 +438,47 @@ footer span{
 @media screen and (min-width:480px){
     .main_head{
         display: block;
+        background-color:var(--main-header-color) ;
+        padding: 0 10px 10px 10px;
+        height: 40%;
+    }
+    .flex_projet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .case_projet{
+        width: 45%;
+        margin: 10px;
+        border-radius: 20px 20px 0 20px ;
+        overflow: hidden;
+        background-color: var(--first-color);
+    }
+    .case_projet img{
+        width: 100%;
+    }
+    .case_projet div{
+        display: flex;
+        flex-direction: column;
+    }
+    .case_projet h3{
+        color: var(--font-color);
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .case_projet p{
+        color: var(--main-header-color);
+        padding: 10px 15px;
+    }
+    .case_projet a{
+        color: var(--primary-color);
+        padding: 10px 15px;
+        align-self: flex-end;
+    }
+    .slider{
+        flex-direction: column;
+    }
+
+    #travaux h2{
+        display: none;
     }
 }
