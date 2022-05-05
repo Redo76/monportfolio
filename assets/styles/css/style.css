@@ -14,6 +14,7 @@
     --projet-mob-font-color:#ffffff;
     --projet-desk-font-color:#ffffff;
     --projet-btn-color: #C4C4C4;
+    --projet-desk-btn-color: #C4C4C4;
     --projet-icon-desk-color:#17b1bf;
     --font-color: #ffffff;
     --title-color: #ffffff;
@@ -38,6 +39,7 @@ html[data-theme="light"]{
     --projet-mob-font-color:#000000;
     --projet-desk-font-color:#000000;
     --projet-btn-color: #ffffff;
+    --projet-desk-btn-color: #17b1bf;
     --projet-icon-desk-color:#ffffff;
     --font-color: #000000;
     --title-color: #17b1bf;
@@ -55,6 +57,7 @@ html[data-theme="light"]{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
@@ -68,7 +71,6 @@ header, aside{
 }
 header{
     font-family: var(--raleway);
-    height: 450px;
     width: 100%;
 }
 
@@ -92,7 +94,7 @@ header{
     display: none;
 }
 #colorSwitch{
-    color: var(--font-color);
+    color: var(--title-color);
     display: flex;
     justify-content: center;
     margin: 3% 0;
@@ -241,6 +243,7 @@ aside p{
     padding: 5px;
     width: 300px;
     font-size: 18px;
+    text-align: center;
 }
 aside button{
     display: block;
@@ -438,17 +441,15 @@ footer span{
 /* Début des Medias Queries */
 
 @media screen and (min-width:480px){
-    header{
-        height: 340px;
+    header h1, header span{
+        margin-left: 20px;
+        font-size: 55px;
     }
     .en-tete{
         display: flex;
     }
-    .contact{
-        display: block;
-    }
     #colorSwitch{
-        margin-right: 15px;
+        margin-right: 5%;
     }
     .nom{
         justify-content: flex-start;
@@ -460,26 +461,26 @@ footer span{
     .flex_btn{
         display: flex;
         justify-content: space-around;
+        padding: 0 5%;
     }
     .header_btn{
         margin: 30px 0;
-        width: 220px;
+        width: 200px;
         justify-content: space-around;
     }
     .header_btn p{
-        font-size: 25px;
-    }
-    .projet_btn i{
-        font-size: 30px;
+        font-size: 22px;
     }
     .main_head{
         display: block;
         background-color:var(--main-header-color) ;
-        padding: 0 10px 10px 10px;
+        padding: 10px 20px 30px 20px;
         height: 40%;
     }
     .main_head h2{
         text-align: left;
+        font-size: 55px; 
+        padding: 0;
     }
     .flex_projet{
         display: flex;
@@ -520,12 +521,19 @@ footer span{
     .slider{
         flex-direction: column;
     }
+    .projet_btn i{
+        font-size: 30px;
+        color: var(--projet-icon-desk-color);
+    }
+    .projet_btn p{
+        color: var(--first-color);
+    }
     .card{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr 90px;
         grid-template-areas: "img info"
-                             "btn info";
+                            "btn info";
     }
     .card img{
         width: 100%;
@@ -543,12 +551,13 @@ footer span{
     .projet_btn{
         grid-area: btn;
         margin: auto;
+        background-color: var(--projet-desk-btn-color);
     }
     .right{
         display: grid;
         grid-template-rows: 1fr 90px;
         grid-template-areas: "info img"
-                             "info btn";
+        "info btn";
     }
     #travaux h2{
         display: none;
@@ -559,6 +568,7 @@ footer span{
     }
     aside h2{
         text-align:left ;
+        font-size: 55px;
     }
     aside h3{
         font-size: 40px;
@@ -566,10 +576,98 @@ footer span{
     aside p{
         font-size:22px ;
         width: 100%;
-        text-align: center;
+    }
+    #modal_cv ul{
+        font-size: 18px;
+    }
+    footer span{
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    form{
+        width: 400px;
+    }
+    form button{
+        font-size: 18px;
+    }
+    .reseaux{
+        padding: 0 15% 30px;
+    }
+    .res{
+        width: 80px;
+        height: 80px;
+    }
+    .res i{
+        font-size: 50px;
     }
     #profil_content{
         padding: 0 10%;
         margin-top: 50px;
+    }
+}
+
+@media screen and (min-width:675px){
+    .contact{
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+    }
+    .contact i{
+        color:var(--title-color);
+        padding: 5px 0 5px 10px ;
+        font-size: 30px;
+    }
+    .contact p{
+        display: none;
+    }
+    .header_btn{
+        width: 250px;
+    }
+    .header_btn p{
+        font-size: 28px;
+    }
+    .case_projet div{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 855px){
+    .case_projet{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    header h1, header span{
+        margin-left: 50px;
+    }
+    .contact{
+        width: 40%;
+    }
+    .contact p{
+        display: block;
+        font-size: 30px;
+        color: var(--title-color);
+    }
+    .contact i{
+        font-size: 40px;
+    }
+    #colorSwitch{
+        font-size: 22px;
+        margin: 15px 10px 0 0;
+    }
+    .contact, #colorSwitch{
+        padding-bottom: 40px;
+    }
+    .nom{
+        margin: 0;
+        font-size: 48px;
+    }
+    .nom span{
+        margin-left: 20px;
+        font-size: 48px;
+    }
+    .flex_btn{
+        width: 60%;
     }
 }
