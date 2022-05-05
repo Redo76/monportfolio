@@ -512,7 +512,7 @@ footer span{
     }
     .case_projet a{
         color: var(--primary-color);
-        padding: 10px 15px;
+        padding: 20px;
         align-self: flex-end;
     }
     .case_projet a:hover{
@@ -738,6 +738,15 @@ footer span{
 }
 
 @media screen and (min-width: 1200px) {
+    .scroll{
+        display: block;
+        height: 5px;
+        border-radius: 20px;
+        width: 0%;
+        background-color: var(--primary-color);
+        position: fixed;
+        transition: 0.5s ease-in-out;
+    }
     .nom{
         font-size: 48px;
     }
