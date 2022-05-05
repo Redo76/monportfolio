@@ -218,7 +218,7 @@ aside{
     padding: 20px 0;
 }
 .photo_profil{
-    margin: 20px auto;
+    margin: 30px auto;
     width: 160px;
     height: 160px;
     border-radius: 50%;
@@ -489,7 +489,7 @@ footer span{
     }
     .case_projet{
         width: 45%;
-        margin: 10px;
+        margin: 15px 10px;
         border-radius: 20px 20px 0 20px ;
         overflow: hidden;
         background-color: var(--case-color);
@@ -533,7 +533,7 @@ footer span{
         grid-template-columns: 50% 50%;
         grid-template-rows: 1fr 90px;
         grid-template-areas: "img info"
-                            "btn info";
+                            ". btn";
     }
     .card img{
         width: 100%;
@@ -547,6 +547,7 @@ footer span{
     .projet_info{
         width: 100%;
         grid-area: info;
+        align-self: center;
     }
     .projet_btn{
         grid-area: btn;
@@ -557,7 +558,7 @@ footer span{
         display: grid;
         grid-template-rows: 1fr 90px;
         grid-template-areas: "info img"
-        "info btn";
+                            "btn .";
     }
     #travaux h2{
         display: none;
@@ -626,14 +627,37 @@ footer span{
     .header_btn p{
         font-size: 28px;
     }
+    .flex_btn{
+        width: 95%;
+    }
     .case_projet div{
         font-size: 20px;
+    }
+    .projet_info h3 {
+        font-size: 30px;
+    }
+    .projet_info p {
+        font-size: 17px;
     }
 }
 
 @media screen and (min-width: 855px){
     .case_projet{
         width: 30%;
+    }
+    .contact{
+        width: 35%;
+        padding: 0;
+    }
+    .contact p{
+        display: block;
+        font-size: 19px;
+    }
+    #colorSwitch{
+        margin-right: 2%;
+    }
+    .flex_btn{
+        width: 70%;
     }
 }
 
@@ -646,15 +670,15 @@ footer span{
     }
     .contact p{
         display: block;
-        font-size: 30px;
+        font-size: 28px;
         color: var(--title-color);
     }
     .contact i{
-        font-size: 40px;
+        font-size: 28px;
     }
     #colorSwitch{
         font-size: 22px;
-        margin: 15px 10px 0 0;
+        margin: 8px 10px 0 0;
     }
     .contact, #colorSwitch{
         padding-bottom: 40px;
@@ -667,7 +691,46 @@ footer span{
         margin-left: 20px;
         font-size: 48px;
     }
-    .flex_btn{
-        width: 60%;
+    .main_head h2{
+        font-size: 55px; 
+        padding-left: 30px;
     }
+    .slider{
+        padding: 0 40px;
+    }
+    .projet_info{
+        padding: 0 30px;
+    }
+    aside h2{
+        padding-left: 50px;
+    }
+    .flex_profil{
+        display: flex;
+    }
+    #profil_content{
+        width: 60%;
+        padding: 0 2%;
+    }
+    #profil_content h3{
+        text-align: left;
+        padding: 20px 5px;
+    }
+    #profil_content p{
+        text-align: left;
+    }
+    .footer_flex{
+        display: flex;
+        align-items: center;
+    }
+    .footer_flex > div{
+        width: 50%;
+    }
+    footer span{
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
 }

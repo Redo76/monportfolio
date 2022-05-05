@@ -183,11 +183,13 @@
     <!-- Début de la partie Profil du portfolio -->
     <aside id="profil">
         <h2>Mon profil</h2>
-        <div id="profil_content">
+        <div class="flex_profil">
             <div class="photo_profil"></div>
-            <h3>blablabla Phrase d'accroche blablabla</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur nisi, laboriosam optio ex natus tempore sequi omnis, sapiente recusandae praesentium veniam ipsum porro dolore officiis explicabo obcaecati. Quidem, laborum?</p>
-            <button id="cv_btn">En apprendre plus</button>
+            <div id="profil_content">
+                <h3>blablabla Phrase d'accroche blablabla</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur nisi, laboriosam optio ex natus tempore sequi omnis, sapiente recusandae praesentium veniam ipsum porro dolore officiis explicabo obcaecati. Quidem, laborum?</p>
+                <button id="cv_btn">En apprendre plus</button>
+            </div>
         </div>
     </aside>
     <!-- Création d'une modal pour afficher le CV au clic d'un boutton -->
@@ -230,43 +232,47 @@
     <!-- Début du footer -->
     <footer>
         <h2>Formulaire de contact</h2>
-        <form action="">
-            <div>
-                <input type="text" placeholder="E-mail*">
-                <span class="underline"></span>
-            </div>
-            <div>
-                <input type="text" placeholder="Nom et prénom*">
-                <span class="underline"></span>
-            </div>
-            <div>
-                <input type="text" placeholder="Objet">
-                <span class="underline"></span>
-            </div>
-            <div>
-                <textarea cols="30" rows="10" placeholder="Message"></textarea>
-                <span class="underline"></span>
-            </div>
-            <button>Envoyez</button>
-            
-        </form>
-        <span>Contactez moi sur les réseaux sociaux !</span>
-        <div class="reseaux">    
-            <a href="#">
-                <div class="res">
-                    <i class="fa-brands fab fa-twitter-square"></i>
+        <div class="footer_flex">
+            <form action="">
+                <div>
+                    <input type="text" placeholder="E-mail*">
+                    <span class="underline"></span>
                 </div>
-            </a>
-            <a href="#">
-                <div class="res">
-                    <i class="fa-brands fab fa-linkedin"></i>
+                <div>
+                    <input type="text" placeholder="Nom et prénom*">
+                    <span class="underline"></span>
                 </div>
-            </a>
-            <a href="#">
-                <div class="res">
-                    <i class="fa-brands fab fa-facebook-square"></i>
+                <div>
+                    <input type="text" placeholder="Objet">
+                    <span class="underline"></span>
                 </div>
-            </a>
+                <div>
+                    <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                    <span class="underline"></span>
+                </div>
+                <button>Envoyez</button>
+                
+            </form>
+            <div >    
+                <span>Contactez moi sur les réseaux sociaux !</span>
+                <div class="reseaux">    
+                    <a href="#">
+                        <div class="res">
+                            <i class="fa-brands fab fa-twitter-square"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="res">
+                            <i class="fa-brands fab fa-linkedin"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="res">
+                            <i class="fa-brands fab fa-facebook-square"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- Mise en place des scripts js -->
