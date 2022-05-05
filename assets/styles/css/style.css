@@ -610,6 +610,7 @@ footer span{
 @media screen and (min-width:675px){
     .contact{
         display: flex;
+        justify-content: end;
         align-items: center;
         padding: 0 15px;
     }
@@ -646,15 +647,17 @@ footer span{
         width: 30%;
     }
     .contact{
-        width: 35%;
+        width: 50%;
         padding: 0;
     }
     .contact p{
         display: block;
         font-size: 19px;
+        color: var(--title-color);
     }
     #colorSwitch{
         margin-right: 2%;
+        margin-left : 35px;
     }
     .flex_btn{
         width: 70%;
@@ -666,30 +669,29 @@ footer span{
         margin-left: 50px;
     }
     .contact{
-        width: 40%;
+        width: 50%;
     }
     .contact p{
         display: block;
         font-size: 28px;
-        color: var(--title-color);
     }
     .contact i{
         font-size: 28px;
     }
     #colorSwitch{
         font-size: 22px;
-        margin: 8px 10px 0 0;
+        margin: 8px 10px 0 35px;
     }
     .contact, #colorSwitch{
         padding-bottom: 40px;
     }
     .nom{
         margin: 0;
-        font-size: 48px;
+        font-size: 42px;
     }
     .nom span{
         margin-left: 20px;
-        font-size: 48px;
+        font-size: 42px;
     }
     .main_head h2{
         font-size: 55px; 
@@ -697,6 +699,10 @@ footer span{
     }
     .slider{
         padding: 0 40px;
+    }
+    .card{
+        height: 100vh;
+        margin: 100px 0;
     }
     .projet_info{
         padding: 0 30px;
@@ -732,5 +738,23 @@ footer span{
 }
 
 @media screen and (min-width: 1200px) {
-    
+    .nom{
+        font-size: 48px;
+    }
+    .nom span{
+        font-size: 48px;
+    }
+    .contact p{
+        font-size: 35px;
+    }
+    .contact i{
+        font-size: 35px;
+    }
+    #colorSwitch{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .flex_btn{
+        width: 50%;
+    }
 }
