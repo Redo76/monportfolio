@@ -61,7 +61,7 @@ html[data-theme="light"]{
 }
 body{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--first-color);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -178,15 +178,17 @@ h2{
 }
 .card img{
     display: block;
+    border-radius: 20px;
 }
 .card h3{
     text-align: center;
     font-size: 25px;
-    padding: 20px;
+    padding: 30px 20px 20px 20px;
     font-weight: 600;
 }
 .card p{
     padding: 5px;
+    margin: auto;
     width: 300px;
 }
 .projet_btn{
@@ -319,6 +321,7 @@ ul i{
 .logiciel{
     display: flex;
     justify-content: center;
+    margin: 10px 0;
 }
 .logiciel i{
     margin: 5px 5px;
@@ -529,16 +532,13 @@ footer span{
         color: var(--first-color);
     }
     .card{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 90px;
-        grid-template-areas: "img info"
-                            ". btn";
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     }
     .card img{
         width: 100%;
         padding: 20px;
-        grid-area: img;
+        border-radius: 40px;
     }
     .card p{
         width: 100%;
@@ -546,19 +546,15 @@ footer span{
     }
     .projet_info{
         width: 100%;
-        grid-area: info;
         align-self: center;
     }
     .projet_btn{
-        grid-area: btn;
-        margin: auto;
+
+        margin: 25px auto;
         background-color: var(--projet-desk-btn-color);
     }
     .right{
-        display: grid;
-        grid-template-rows: 1fr 90px;
-        grid-template-areas: "info img"
-                            "btn .";
+        flex-direction: row-reverse;
     }
     #travaux h2{
         display: none;
@@ -640,6 +636,13 @@ footer span{
     .projet_info p {
         font-size: 17px;
     }
+    #modal_cv ul{
+        font-size: 20px;
+    }
+    .logiciel{
+        justify-content: flex-start;
+        padding-left: 5%;
+    }
 }
 
 @media screen and (min-width: 855px){
@@ -660,11 +663,14 @@ footer span{
         margin-left : 35px;
     }
     .flex_btn{
-        width: 70%;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 1000px){
+    header{
+        padding: 20px;
+    }
     header h1, header span{
         margin-left: 50px;
     }
@@ -697,15 +703,13 @@ footer span{
         font-size: 55px; 
         padding-left: 30px;
     }
-    .slider{
-        padding: 0 40px;
-    }
     .card{
-        height: 100vh;
-        margin: 100px 0;
+        padding: 40px 40px;
     }
     .projet_info{
         padding: 0 30px;
+        align-self: flex-start;
+        width: 50%;
     }
     aside h2{
         padding-left: 50px;
@@ -728,6 +732,9 @@ footer span{
         display: flex;
         align-items: center;
     }
+    form{
+        width: 40%;
+    }
     .footer_flex > div{
         width: 50%;
     }
@@ -735,11 +742,13 @@ footer span{
         font-size: 40px;
         text-align: center;
     }
+    .flex_btn{
+        width: 75%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .scroll{
-        display: block;
         height: 5px;
         border-radius: 20px;
         width: 0%;
@@ -763,7 +772,13 @@ footer span{
         font-size: 25px;
         margin-top: 10px;
     }
+    .fa-adjust{
+        margin-right: 20px;
+    }
     .flex_btn{
-        width: 50%;
+        width: 60%;
+    }
+    .card{
+        height: 100vh;
     }
 }

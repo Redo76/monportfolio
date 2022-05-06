@@ -11,18 +11,17 @@ const barreScroll = document.querySelector(".scroll");
 // Barre de défilement en haut de l'écran 
 
 window.addEventListener("scroll", ()=>{
-    const a = html.scrollTop;
+    const nbrPixelsHaut = html.scrollTop; // On détecte le nombre de pixels caché en haut de l'écran lorsqu'on scroll
     
-    const b = html.scrollHeight ;
+    const nbrPixelsTotal = html.scrollHeight ; // On détecte le nombre de pixels total de notre page
     
-    const c = html.clientHeight;
+    const nbrPixelsEcran = html.clientHeight; // On détecte le nombre de pixels de l'écran .
 
-    if (a === 0){
+    if (nbrPixelsHaut === 0){  // Si on ne scroll pas, la barre n'apparait pas
         barreScroll.style.width = "0%"
-    } else {
-        let pourcentage = (a + c) / b * 100;
-        barreScroll.style.width = `${pourcentage}%`;
-        console.log(parseInt(pourcentage)); 
+    } else { /* Sinon, on déclare une variable pourcentage qui équivaut au nombre de pixels caché et de l'écran divisé par le nombre de pixels total*/
+        let pourcentage = (nbrPixelsHaut + nbrPixelsEcran) / nbrPixelsTotal * 100;
+        barreScroll.style.width = `${parseInt(pourcentage)}%`; //On change la largeur en fonction du pourcentage, on utilise parseInt pour n'avoir que des nombres entiers
     }
 })
 
