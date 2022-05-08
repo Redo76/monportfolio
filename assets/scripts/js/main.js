@@ -8,7 +8,7 @@ const closeModalBtn = document.getElementById("closemodal");
 const html = document.querySelector("html");
 const barreScroll = document.querySelector(".scroll");
 
-// Barre de défilement en haut de l'écran 
+// Barre de progression en haut de l'écran 
 
 window.addEventListener("scroll", ()=>{
     const nbrPixelsHaut = html.scrollTop; // On détecte le nombre de pixels caché en haut de l'écran lorsqu'on scroll
@@ -26,24 +26,30 @@ window.addEventListener("scroll", ()=>{
 })
 
 
-colorSwitch.addEventListener("click", ()=>{
-    let themeDeBase = document.documentElement.getAttribute("data-theme");
-    let themeSelect = "light";
+// Swicth du dark mode au light mode et inversement
 
-    if (themeDeBase === "dark"){
-        themeSelect = "light";
-    } else {
-        themeSelect = "dark";
+colorSwitch.addEventListener("click", ()=>{  //Au clic de l'icone
+    let themeDeBase = document.documentElement.getAttribute("data-theme"); // On récupère l'attribut data-theme dans l'HTML
+    let themeSelect = "light"; // On déclare une variable themeSelect
+
+    if (themeDeBase === "dark"){ // Si l'attribut data theme est en dark
+        themeSelect = "light"; // On attribue "light" à la variable themeSelect 
+    } else {  // Sinon
+        themeSelect = "dark"; // On attribue "dark" à la variable themeSelect 
     }
 
-    document.documentElement.setAttribute("data-theme", themeSelect)
+    document.documentElement.setAttribute("data-theme", themeSelect) // On affecte la valeur de themeSelect à l'attribut data theme  
 })
 
-btnCv.addEventListener("click", ()=>{
+btnCv.addEventListener("click", ()=>{ // Au clic du bouton, on affiche la modal
     afficherModalCv();
 })
 
-closeModalBtn.addEventListener("click", ()=>{
+closeModalBtn.addEventListener("click", ()=>{ // Au clic de la croix sur la modal, on retire la modal
+    retirerModalCv();
+})
+
+backDrop.addEventListener("click", () =>{ // Lorsqu'on clique à l'éxterieur de la modal 
     retirerModalCv();
 })
 
