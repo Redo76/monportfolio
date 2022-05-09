@@ -2,6 +2,9 @@
 
 ## Consigne
 
+L'objectif est de créer un portfolio professionel qui pourrait éventuellement nous aider à trouver un stage.
+Ce projet servira d'ECF.
+
 ## Validation
 
 <p>
