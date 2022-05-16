@@ -3,6 +3,8 @@
 ## Consigne
 
 L'objectif est de créer un portfolio professionel qui pourrait éventuellement nous aider à trouver un stage.
+On commmence par établir la maquette du site avec figma.
+Ensuite, à partir de la maquette réaliser l'integration html/css.
 Ce projet servira d'ECF.
 
 ## Validation
