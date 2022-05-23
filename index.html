@@ -24,8 +24,8 @@
             </div>
             <div class="contact">
                 <p>Contactez moi !</p>
-                <a href="https://www.linkedin.com/in/redouane-hamadache-5b0b991b1/" target="_blank"><i class="fa-brands fa-linkedin"></i> </a>  
-                <a href="https://github.com/Redo76" target="_blank"><i class="fa-brands fa-github"></i>   </a>
+                <a href="https://www.linkedin.com/in/redouane-hamadache-5b0b991b1/" target="_blank" aria-label="linkedin"><i class="fa-brands fa-linkedin"></i> </a>  
+                <a href="https://github.com/Redo76" target="_blank" aria-label="github"><i class="fa-brands fa-github"></i>   </a>
             </div>
             <!-- Petite icône pour switcher dark/light mode -->
             <div id="colorSwitch">
@@ -243,19 +243,23 @@
             <form>
                 <h2>Formulaire de contact</h2>
                 <div>
-                    <input type="text" placeholder="E-mail*">
+                    <label for="email" hidden>E-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail*">
                     <span class="underline"></span>
                 </div>
                 <div>
-                    <input type="text" placeholder="Nom et prénom*">
+                    <label for="name" hidden>Nom, prenom :</label>
+                    <input type="text" id="name" name="name" placeholder="Nom et prénom*">
                     <span class="underline"></span>
                 </div>
                 <div>
-                    <input type="text" placeholder="Objet">
+                    <label for="objet" hidden>Objet :</label>
+                    <input type="text" id="objet" name="objet" placeholder="Objet">
                     <span class="underline"></span>
                 </div>
                 <div>
-                    <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                    <label for="message" hidden>Message :</label>
+                    <textarea cols="30" rows="10" id="message" name="message" placeholder="Message"></textarea>
                     <span class="underline"></span>
                 </div>
                 <button>Envoyez</button>
@@ -264,17 +268,17 @@
             <div >    
                 <span>Contactez moi sur les réseaux sociaux !</span>
                 <div class="reseaux">    
-                    <a href="#">
+                    <a href="https://twitter.com/?lang=fr" target="_blank" aria-label="twitter">
                         <div class="res">
                             <i class="fa-brands fab fa-twitter-square"></i>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/redouane-hamadache-5b0b991b1/" target="_blank" aria-label="linkedin">
                         <div class="res">
                             <i class="fa-brands fab fa-linkedin"></i>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="https://fr-fr.facebook.com/" target="_blank" aria-label="facebook">
                         <div class="res">
                             <i class="fa-brands fab fa-facebook-square"></i>
                         </div>
